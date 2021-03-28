@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: docker-set_information
+    ports:
+      - 8081:8081
+    #network_mode: "host"
+    build:
+      context: .
+    container_name: app_set_information
