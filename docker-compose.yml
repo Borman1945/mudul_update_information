@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
   app:
     image: docker-set_information
@@ -7,4 +7,12 @@ services:
     #network_mode: "host"
     build:
       context: .
-    container_name: app_set_information
+    container_name: app_set
+    networks:
+      mynetwork:
+        aliases:
+          - app_set.mynetwork
+networks:
+  mynetwork:
+    external:
+      name: myglobalnetwork
