@@ -7,3 +7,5 @@
 
 Если пакет не собирается убедитесь что контейнер с postgres запущен
 или просто запустите приложение modul_get_information в контейнере
+
+sudo docker network connect postgres-network  app_set
